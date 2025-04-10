@@ -1,0 +1,34 @@
+# ZCKoth - Configuración principal
+
+settings:
+  # Tiempo de captura en segundos (por defecto: 300 = 5 minutos)
+  capture-time: 300
+
+  # Enviar mensajes de broadcast
+  broadcast-messages: true
+
+  # ¿Permitir comandos durante la captura?
+  allow-commands: false
+
+  # ¿Guardar datos de koths periódicamente?
+  auto-save: true
+
+  # Intervalo de auto-guardado en minutos
+  auto-save-interval: 5
+
+  # Crear copia de seguridad al guardar
+  backup-on-save: true
+
+  # Número máximo de copias de seguridad a mantener (0 = ilimitado)
+  max-backups: 5
+
+# Comandos bloqueados mientras se captura un KOTH
+blocked-commands:
+  - "spawn"
+  - "home"
+  - "tpa"
+  - "f home"
+  - "warp"
+  - "ec"
+  - "enderchest"
+  - "echest"

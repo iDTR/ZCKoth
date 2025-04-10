@@ -1,0 +1,135 @@
+# ZCKoth - Mensajes configurables
+
+prefix: '&7[&6ZCKoth&7] '
+
+# Mensajes para la configuración de KOTH
+commands:
+  # Mensajes generales
+  no-permission: '&cNo tienes permiso para usar este comando.'
+  player-only: '&cEste comando solo puede ser ejecutado por un jugador.'
+  reload: '&aConfiguración recargada correctamente.'
+  axe: '&aHas recibido el hacha de selección. Usa clic izquierdo y derecho para seleccionar
+    los puntos del KOTH.'
+
+  # Mensajes para la creación de KOTH
+  create:
+    usage: '&cUso: /zckoth create <nombre> <tiempoCaptura> <tipo> <puntajeClan>'
+
+  # Mensajes para KOTH conquest
+  conquest:
+    select:
+      start: '&aIniciando selección de Conquest &e%name%&a. Selecciona las 4 etapas.'
+      stage: '&eSelecciona la zona para la etapa &c%stage%&e usando el hacha de selección.'
+      stage-completed: '&aEtapa &e%stage% &aseleccionada correctamente.'
+      worldguard: '&aSelecciona la región de WorldGuard escribiendo su nombre en el
+        chat.'
+    created: '&aConquest &e%name% &acreado correctamente con 4 etapas.'
+    not-creating: '&cNo estás en proceso de creación de un Conquest.'
+    usage: '&cUso: /zckoth create <nombre> <tiempoCaptura> CONQUEST <puntajeClan>'
+
+  # Otros mensajes de comandos
+  remove:
+    usage: '&cUso: /zckoth remove <nombre>'
+  'true':
+    usage: '&cUso: /zckoth on <nombre>'
+  'false':
+    usage: '&cUso: /zckoth off <nombre>'
+  move:
+    usage: '&cUso: /zckoth move <nombre>'
+  loot:
+    usage: '&cUso: /zckoth loot <nombre> [página]'
+  deletecommand:
+    usage: '&cUso: /zckoth deletecommand <comando>'
+
+  koth-exists: '&cYa existe un KOTH con ese nombre.'
+  koth-created: '&aEl KOTH &e%name% &ase ha creado correctamente.'
+  koth-removed: '&aEl KOTH &e%name% &ase ha eliminado correctamente.'
+  koth-not-found: '&cNo se ha encontrado ningún KOTH con ese nombre.'
+  koth-already-active: '&cEl KOTH ya está activo.'
+  koth-not-active: '&cEl KOTH no está activo.'
+  koth-started: '&aEl KOTH &e%name% &aha sido activado.'
+  koth-stopped: '&aEl KOTH &e%name% &aha sido desactivado.'
+  koth-moved: '&aEl KOTH &e%name% &ase ha movido correctamente.'
+  no-koths: '&cNo hay KOTHs creados.'
+  no-selection: '&cDebes seleccionar los dos puntos del KOTH con el hacha de selección.'
+  invalid-number: '&cDebes especificar un número válido.'
+  invalid-type: '&cTipo de KOTH inválido. Opciones: SOLO, CONQUEST'
+  command-blocked: '&aEl comando &e%command% &aha sido bloqueado.'
+  command-already-blocked: '&cEse comando ya está bloqueado.'
+  blocked-in-koth: '&cNo puedes usar este comando mientras estás en un KOTH.'
+  koth-list:
+    header: '&e=== &6KOTHs disponibles &e==='
+    entry: '&6- %name% &7(%type%) &7- %status%'
+
+# Mensajes del hacha de selección
+axe:
+  first-point: '&aPrimer punto seleccionado.'
+  second-point: '&aSegundo punto seleccionado.'
+
+# Mensajes de KOTH
+koth:
+  started: '&6¡El KOTH &e%koth% &6ha comenzado! ¡Ve a capturarlo!'
+  ended: '&6El KOTH &e%koth% &6ha terminado.'
+  capturing: '&e%player% &6está capturando el KOTH &e%koth%&6.'
+  left: '&e%player% &6ha abandonado el KOTH &e%koth%&6.'
+  progress: '&e%player% &6está capturando el KOTH &e%koth% &6(&e%progress%%&6).'
+  captured: '&e%player% &6ha capturado el KOTH &e%koth%&6.'
+  clan:
+    points: '&6El clan &e%clan% &6ha recibido &e%points% &6puntos por capturar el
+      KOTH.'
+
+# Mensajes específicos para el modo Conquest
+conquest:
+  started: '&6¡El Conquest &e%koth% &6ha comenzado! ¡Captura la etapa &e%stage%&6!'
+  ended: '&6El Conquest &e%koth% &6ha terminado.'
+  capturing: '&e%player% &6está capturando la etapa &e%stage% &6del Conquest &e%koth%&6.'
+  left: '&e%player% &6ha abandonado la etapa &e%stage% &6del Conquest &e%koth%&6.'
+  progress: '&e%player% &6está capturando la etapa &e%stage% &6del Conquest &e%koth% &6(&e%progress%%&6).'
+  captured: '&e%player% &6ha capturado la etapa &e%stage% &6del Conquest &e%koth%&6.'
+  next: '&6La siguiente etapa &e%stage% &6del Conquest &e%koth% &6está ahora activa.'
+  next-error: '&cError al activar la siguiente etapa &e%koth%&c. El Conquest ha sido cancelado.'
+  completed: '&6¡El Conquest &e%koth% &6ha sido completado! La región de entrada ha sido bloqueada.'
+  use-stages: '&cEste es el Conquest principal. Debes capturar las etapas individuales. Etapa actual: &e%current_stage%'
+  current-stage-hint: '&aDirígete a la etapa: &e%stage%'
+  stage:
+    not-active-yet: '&cLa etapa &e%stage% &cdel Conquest &e%koth% &caún no está activa. La etapa actual es la &e%current_stage%&c.'
+
+# Mensajes para barra de progreso
+progress-bar:
+  title: '&c%koth% &f- &e%progress%%'
+
+# Mensajes de botín
+loot:
+  saved: '&aEl botín para el KOTH &e%koth% &ase ha guardado correctamente.'
+  commands:
+    edit:
+      header: '&e=== &6Comandos para el KOTH &e%koth% &e==='
+      instructions: '&7Usa &e/zckoth loot addcmd %koth% <comando> &7para añadir un
+        comando'
+    empty: '&cNo hay comandos configurados. Usa /zckoth loot addcmd para añadir.'
+    added: '&aComando añadido al KOTH &e%koth%&a.'
+    removed: '&aComando eliminado del KOTH &e%koth%&a.'
+    cleared: '&aTodos los comandos han sido eliminados del KOTH &e%koth%&a.'
+
+    # Mensajes para el sistema de programación automática
+schedule:
+      no-schedules: '&cNo hay programaciones configuradas.'
+      list:
+        header: '&e=== &6Programaciones de KOTHs &e==='
+        entry: '&6%index%. &e%koth% &7- &f%time% &7- &f%days% &7- %status%'
+      add:
+        usage: '&cUso: /zcschedule add <koth> <hora> <días...>'
+        error: '&cError al crear programación: &e%error%'
+      remove:
+        usage: '&cUso: /zcschedule remove <id|índice>'
+      toggle:
+        usage: '&cUso: /zcschedule toggle <id|índice>'
+      invalid-id: '&cID de programación inválido.'
+      invalid-index: '&cÍndice de programación inválido.'
+      invalid-time-format: '&cFormato de hora inválido. Use HH:MM (24h)'
+      not-found: '&cProgramación no encontrada.'
+      added: '&aProgamación añadida para &e%koth% &aa las &e%time% &a(%days%)'
+      removed: '&aProgamación eliminada correctamente.'
+      enabled: '&aProgamación para &e%koth% &aactivada.'
+      disabled: '&cProgamación para &e%koth% &cdesactivada.'
+      koth-activated: '&6¡El KOTH &e%koth% &6ha sido activado automáticamente!'

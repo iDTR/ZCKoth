@@ -1,0 +1,84 @@
+name: ZCKoth
+version: '1.0-SNAPSHOT'
+main: me.DTR.zCKoth.ZCKoth
+api-version: '1.13'
+authors: [DTR]
+description: Sistema de KOTH avanzado para Spigot
+depend: [WorldGuard]
+softdepend: [PlaceholderAPI, UltimateClans]
+
+commands:
+  zckoth:
+    description: Comando principal del plugin ZCKoth
+    aliases: [koth, zck]
+    usage: /<command>
+  zcschedule:
+    description: Comando para gestionar programaciones de KOTHs
+    aliases: [kothschedule, schedule]
+    usage: /<command>
+
+permissions:
+  zckoth.admin:
+    description: Permite acceso completo al plugin
+    default: op
+    children:
+      zckoth.reload: true
+      zckoth.axe: true
+      zckoth.create: true
+      zckoth.remove: true
+      zckoth.on: true
+      zckoth.off: true
+      zckoth.move: true
+      zckoth.list: true
+      zckoth.loot: true
+      zckoth.deletecommand: true
+      zckoth.bypass: true
+      zckoth.schedule: true
+
+  zckoth.reload:
+    description: Permite recargar la configuración del plugin
+    default: op
+
+  zckoth.axe:
+    description: Permite obtener y usar el hacha de selección
+    default: op
+
+  zckoth.create:
+    description: Permite crear nuevos KOTHs
+    default: op
+
+  zckoth.remove:
+    description: Permite eliminar KOTHs
+    default: op
+
+  zckoth.on:
+    description: Permite activar KOTHs
+    default: op
+
+  zckoth.off:
+    description: Permite desactivar KOTHs
+    default: op
+
+  zckoth.move:
+    description: Permite mover KOTHs
+    default: op
+
+  zckoth.list:
+    description: Permite ver la lista de KOTHs
+    default: op
+
+  zckoth.loot:
+    description: Permite editar las recompensas de los KOTHs
+    default: op
+
+  zckoth.deletecommand:
+    description: Permite bloquear comandos en los KOTHs
+    default: op
+
+  zckoth.bypass:
+    description: Permite usar comandos bloqueados dentro de KOTHs
+    default: op
+
+  zckoth.schedule:
+    description: Permite gestionar programaciones de KOTHs
+    default: op
